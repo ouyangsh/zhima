@@ -1,0 +1,1 @@
+<view class="content"><button style="margin:20px 0 20px 0" bindtap="{{a}}">个人资料</button><uni-forms-item wx:if="{{d}}" u-s="{{['d']}}" u-i="24d62c50-0" bind:__l="__l" u-p="{{d}}"><uni-data-checkbox wx:if="{{c}}" u-i="24d62c50-1,24d62c50-0" bind:__l="__l" bindupdateModelValue="{{b}}" u-p="{{c}}"></uni-data-checkbox></uni-forms-item><button bindtap="{{e}}">前往登录</button></view>

@@ -1,0 +1,1 @@
+<view class="stat-card data-v-ae7f78fc"><view class="count data-v-ae7f78fc" style="{{'color:' + b}}">{{a}}</view><view class="label data-v-ae7f78fc">{{c}}</view></view>

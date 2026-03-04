@@ -1,0 +1,12 @@
+{
+  "navigationBarTitleText": "我的项目",
+  "navigationStyle": "custom",
+  "usingComponents": {
+    "top-nav-bar": "../../components/Dashboard/TopNavBar",
+    "bottom-nav-bar": "../../components/Dashboard/BottomNavBar",
+    "home-tab": "../../components/Dashboard/HomeTab",
+    "yarn-tab": "../../components/Dashboard/YarnTab",
+    "discover-tab": "../../components/Dashboard/DiscoverTab",
+    "profile-tab": "../../components/Dashboard/ProfileTab"
+  }
+}

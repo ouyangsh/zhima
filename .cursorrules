@@ -1,0 +1,17 @@
+# 项目规则
+
+## 技术栈
+- 框架: Vue 3 + UniApp
+- 后端: UniCloud
+- 平台: 微信小程序 (用户端)
+
+## 约束
+1. **直接给出代码**: 禁止编写说明文档或冗长的文字描述。直接提供代码。
+2. **无 Markdown 文档**: 除非明确要求，否则避免生成单独的 markdown 文档文件。专注于代码。
+
+## 微信小程序开发规范
+- **全页面兼容**: 所有页面必须兼容微信小程序。
+- **安全区域适配**:
+  - 顶部导航栏必须处理状态栏高度 (Status Bar Height)。
+  - 底部操作栏/按钮必须处理底部安全区 (Safety Area Insets)。
+  - 使用 `uni.getSystemInfoSync()` 获取 `statusBarHeight` 和 `safeAreaInsets`。

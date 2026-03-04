@@ -1,0 +1,84 @@
+{
+    "bsonType": "object",
+    "required": [
+        "title",
+        "cover",
+        "user_id"
+    ],
+    "permission": {
+        "read": true,
+        "create": "auth.uid != null",
+        "update": "doc.user_id == auth.uid",
+        "delete": "doc.user_id == auth.uid"
+    },
+    "properties": {
+        "_id": {
+            "description": "存储文档 ID（用户 ID），系统自动生成"
+        },
+        "user_id": {
+            "bsonType": "string",
+            "description": "用户ID，参考uni-id-users表",
+            "forceDefaultValue": {
+                "$env": "uid"
+            }
+        },
+        "title": {
+            "bsonType": "string",
+            "title": "标题",
+            "description": "作品标题",
+            "trim": "both"
+        },
+        "cover": {
+            "bsonType": "string",
+            "title": "封面图",
+            "description": "作品封面图片地址"
+        },
+        "images": {
+            "bsonType": "array",
+            "title": "图片列表",
+            "description": "作品图片列表",
+            "items": {
+                "bsonType": "string"
+            }
+        },
+        "content": {
+            "bsonType": "string",
+            "title": "内容",
+            "description": "作品描述/正文"
+        },
+        "user_name": {
+            "bsonType": "string",
+            "title": "作者昵称",
+            "description": "冗余存储作者昵称，减少联表查询"
+        },
+        "user_avatar": {
+            "bsonType": "string",
+            "title": "作者头像",
+            "description": "冗余存储作者头像"
+        },
+        "likes": {
+            "bsonType": "int",
+            "title": "点赞数",
+            "defaultValue": 0
+        },
+        "views": {
+            "bsonType": "int",
+            "title": "浏览量",
+            "defaultValue": 0
+        },
+        "created_at": {
+            "bsonType": "timestamp",
+            "title": "创建时间",
+            "forceDefaultValue": {
+                "$env": "now"
+            }
+        },
+        "updated_at": {
+            "bsonType": "timestamp",
+            "title": "更新时间",
+            "forceDefaultValue": {
+                "$env": "now"
+            }
+        }
+    }
+}

@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "stat-card": "./StatCard",
+    "project-card": "./ProjectCard"
+  }
+}

@@ -1,0 +1,73 @@
+{
+    "bsonType": "object",
+    "required": [
+        "user_id",
+        "type",
+        "from_user_name"
+    ],
+    "permission": {
+        "read": "doc.user_id == auth.uid",
+        "create": "auth.uid != null",
+        "update": "false",
+        "delete": "doc.user_id == auth.uid"
+    },
+    "properties": {
+        "_id": {
+            "description": "系统自动生成"
+        },
+        "user_id": {
+            "bsonType": "string",
+            "description": "接收通知的用户ID（被点赞/评论的人）"
+        },
+        "type": {
+            "bsonType": "string",
+            "title": "类型",
+            "enum": [
+                "like",
+                "comment",
+                "system"
+            ],
+            "description": "消息类型：like=点赞，comment=评论，system=系统消息"
+        },
+        "from_user_id": {
+            "bsonType": "string",
+            "title": "触发者ID",
+            "description": "点赞/评论的用户ID"
+        },
+        "from_user_name": {
+            "bsonType": "string",
+            "title": "触发者昵称"
+        },
+        "from_user_avatar": {
+            "bsonType": "string",
+            "title": "触发者头像"
+        },
+        "target_id": {
+            "bsonType": "string",
+            "title": "目标ID",
+            "description": "关联的作品ID或评论ID"
+        },
+        "target_title": {
+            "bsonType": "string",
+            "title": "目标标题",
+            "description": "关联的作品标题（如：你的作品「彩虹毯子」）"
+        },
+        "content": {
+            "bsonType": "string",
+            "title": "内容",
+            "description": "评论内容或系统消息内容"
+        },
+        "is_read": {
+            "bsonType": "bool",
+            "title": "已读状态",
+            "defaultValue": false
+        },
+        "created_at": {
+            "bsonType": "timestamp",
+            "title": "创建时间",
+            "forceDefaultValue": {
+                "$env": "now"
+            }
+        }
+    }
+}

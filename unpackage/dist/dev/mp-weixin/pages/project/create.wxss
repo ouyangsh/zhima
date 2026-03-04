@@ -1,0 +1,333 @@
+/**
+ * 这里是uni-app内置的常用样式变量
+ *
+ * uni-app 官方扩展插件及插件市场（https://ext.dcloud.net.cn）上很多三方插件均使用了这些样式变量
+ * 如果你是插件开发者，建议你使用scss预处理，并在插件代码中直接使用这些变量（无需 import 这个文件），方便用户通过搭积木的方式开发整体风格一致的App
+ *
+ */
+/**
+ * 如果你是App开发者（插件使用者），你可以通过修改这些变量来定制自己的插件主题，实现自定义主题功能
+ *
+ * 如果你的项目同样使用了scss预处理，你也可以直接在你的 scss 代码中使用如下变量，同时无需 import 这个文件
+ */
+/* 颜色变量 */
+/* 行为相关颜色 */
+/* 文字基本颜色 */
+/* 背景颜色 */
+/* 边框颜色 */
+/* 尺寸变量 */
+/* 文字尺寸 */
+/* 图片尺寸 */
+/* Border Radius */
+/* 水平间距 */
+/* 垂直间距 */
+/* 透明度 */
+/* 文章场景相关 */
+.create-project-page.data-v-f3e7bcea {
+  min-height: 100vh;
+  background-color: #FAF9F6;
+  padding-bottom: 100px;
+}
+.create-project-page .fixed-header.data-v-f3e7bcea {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  background-color: #ffffff;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+.create-project-page .nav-bar.data-v-f3e7bcea {
+  height: 44px;
+  padding: 0 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #ffffff;
+}
+.create-project-page .nav-bar .title.data-v-f3e7bcea {
+  font-size: 16px;
+  font-weight: 600;
+  color: #3A3A3A;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.create-project-page .nav-bar .left.data-v-f3e7bcea, .create-project-page .nav-bar .right.data-v-f3e7bcea {
+  width: 24px;
+  display: flex;
+  align-items: center;
+}
+.create-project-page .form-content.data-v-f3e7bcea {
+  padding: 20px;
+}
+.create-project-page .form-item.data-v-f3e7bcea {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 16px;
+  margin-bottom: 16px;
+}
+.create-project-page .form-item .label.data-v-f3e7bcea {
+  font-size: 14px;
+  color: #666666;
+  margin-bottom: 12px;
+  display: block;
+  font-weight: 500;
+}
+.create-project-page .form-item .input.data-v-f3e7bcea {
+  font-size: 16px;
+  color: #3A3A3A;
+  height: 24px;
+}
+.create-project-page .form-item .textarea.data-v-f3e7bcea {
+  font-size: 16px;
+  color: #3A3A3A;
+  height: 100px;
+  width: 100%;
+}
+.create-project-page .form-item .input-placeholder.data-v-f3e7bcea {
+  color: #CCCCCC;
+}
+.create-project-page .row-inputs.data-v-f3e7bcea {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+}
+.create-project-page .row-inputs .form-item.half.data-v-f3e7bcea {
+  flex: 1;
+  margin-bottom: 0;
+}
+.create-project-page .cover-upload.data-v-f3e7bcea {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 180px;
+  padding: 0;
+  overflow: hidden;
+  position: relative;
+}
+.create-project-page .cover-upload .cover-image.data-v-f3e7bcea {
+  width: 100%;
+  height: 100%;
+}
+.create-project-page .cover-upload .upload-placeholder.data-v-f3e7bcea {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+.create-project-page .cover-upload .upload-placeholder .upload-text.data-v-f3e7bcea {
+  font-size: 12px;
+  color: #999999;
+}
+.create-project-page .status-options.data-v-f3e7bcea {
+  display: flex;
+  gap: 12px;
+}
+.create-project-page .status-options .status-pill.data-v-f3e7bcea {
+  padding: 6px 16px;
+  border-radius: 16px;
+  background-color: #F0F0F0;
+  color: #999999;
+  font-size: 14px;
+  transition: all 0.2s;
+}
+.create-project-page .status-options .status-pill.active.data-v-f3e7bcea {
+  background-color: #6C8EA4;
+  color: #FFFFFF;
+  box-shadow: 0 2px 8px rgba(108, 142, 164, 0.2);
+}
+.create-project-page .footer.data-v-f3e7bcea {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 16px 20px;
+  padding-bottom: calc(16px + constant(safe-area-inset-bottom));
+  /* 兼容 iOS < 11.2 */
+  padding-bottom: calc(16px + env(safe-area-inset-bottom));
+  /* 兼容 iOS >= 11.2 */
+  background-color: #ffffff;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.05);
+  z-index: 10;
+}
+.create-project-page .footer .submit-btn.data-v-f3e7bcea {
+  background-color: #6C8EA4;
+  color: #ffffff;
+  border-radius: 24px;
+  height: 48px;
+  line-height: 48px;
+  font-size: 16px;
+  border: none;
+}
+.create-project-page .footer .submit-btn[disabled].data-v-f3e7bcea {
+  opacity: 0.7;
+}
+.create-project-page .footer .submit-btn.data-v-f3e7bcea:active {
+  opacity: 0.9;
+}
+.create-project-page .label-row.data-v-f3e7bcea {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+.create-project-page .label-row .label.data-v-f3e7bcea {
+  margin-bottom: 0;
+}
+.create-project-page .label-row .add-btn.data-v-f3e7bcea {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 12px;
+  color: #6C8EA4;
+}
+.create-project-page .selected-yarns.data-v-f3e7bcea {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.create-project-page .yarn-tag.data-v-f3e7bcea {
+  display: flex;
+  align-items: center;
+  background-color: #F5F7FA;
+  border-radius: 16px;
+  padding: 4px 8px 4px 4px;
+}
+.create-project-page .yarn-tag .color-dot.data-v-f3e7bcea {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  margin-right: 6px;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+.create-project-page .yarn-tag .yarn-name.data-v-f3e7bcea {
+  font-size: 12px;
+  color: #3A3A3A;
+  margin-right: 6px;
+}
+.create-project-page .yarn-tag .remove-btn.data-v-f3e7bcea {
+  display: flex;
+}
+.create-project-page .empty-yarns.data-v-f3e7bcea {
+  padding: 12px;
+  border: 1px dashed #E0E0E0;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.create-project-page .empty-yarns text.data-v-f3e7bcea {
+  font-size: 12px;
+  color: #999;
+}
+.create-project-page .popup-content.data-v-f3e7bcea {
+  background-color: #fff;
+  border-radius: 16px 16px 0 0;
+  padding-bottom: constant(safe-area-inset-bottom);
+  padding-bottom: env(safe-area-inset-bottom);
+  height: 60vh;
+  display: flex;
+  flex-direction: column;
+}
+.create-project-page .popup-content .popup-header.data-v-f3e7bcea {
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #eee;
+}
+.create-project-page .popup-content .popup-header .popup-title.data-v-f3e7bcea {
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+}
+.create-project-page .popup-content .yarn-list-scroll.data-v-f3e7bcea {
+  flex: 1;
+  height: 0;
+}
+.create-project-page .popup-content .yarn-list.data-v-f3e7bcea {
+  padding: 16px;
+}
+.create-project-page .popup-content .yarn-item.data-v-f3e7bcea {
+  display: flex;
+  align-items: center;
+  padding: 12px;
+  background-color: #f9f9f9;
+  border-radius: 12px;
+  margin-bottom: 12px;
+  border: 1px solid transparent;
+  transition: all 0.2s;
+}
+.create-project-page .popup-content .yarn-item.selected.data-v-f3e7bcea {
+  background-color: #F0F7FF;
+  border-color: #6C8EA4;
+}
+.create-project-page .popup-content .yarn-item .yarn-img.data-v-f3e7bcea {
+  width: 48px;
+  height: 48px;
+  border-radius: 8px;
+  margin-right: 12px;
+  background-color: #eee;
+}
+.create-project-page .popup-content .yarn-item .yarn-info.data-v-f3e7bcea {
+  flex: 1;
+}
+.create-project-page .popup-content .yarn-item .yarn-info .yarn-brand.data-v-f3e7bcea {
+  font-size: 14px;
+  color: #333;
+  font-weight: 500;
+  margin-bottom: 4px;
+  display: block;
+}
+.create-project-page .popup-content .yarn-item .yarn-info .yarn-detail.data-v-f3e7bcea {
+  display: flex;
+  align-items: center;
+}
+.create-project-page .popup-content .yarn-item .yarn-info .yarn-detail .color-dot.data-v-f3e7bcea {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin-right: 6px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+.create-project-page .popup-content .yarn-item .yarn-info .yarn-detail .yarn-code.data-v-f3e7bcea {
+  font-size: 12px;
+  color: #666;
+  margin-right: 12px;
+}
+.create-project-page .popup-content .yarn-item .yarn-info .yarn-detail .yarn-qty.data-v-f3e7bcea {
+  font-size: 12px;
+  color: #999;
+}
+.create-project-page .popup-content .yarn-item .checkbox.data-v-f3e7bcea {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 1px solid #ddd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.selected .create-project-page .popup-content .yarn-item .checkbox.data-v-f3e7bcea {
+  background-color: #6C8EA4;
+  border-color: #6C8EA4;
+}
+.create-project-page .popup-content .empty-state.data-v-f3e7bcea {
+  padding: 40px;
+  text-align: center;
+  color: #999;
+  font-size: 14px;
+}
+.create-project-page .popup-content .popup-footer.data-v-f3e7bcea {
+  padding: 16px;
+  border-top: 1px solid #eee;
+}
+.create-project-page .popup-content .popup-footer .confirm-btn.data-v-f3e7bcea {
+  background-color: #6C8EA4;
+  color: #fff;
+  border-radius: 22px;
+  font-size: 15px;
+  height: 44px;
+  line-height: 44px;
+}

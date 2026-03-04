@@ -1,0 +1,36 @@
+{
+    "bsonType": "object",
+    "required": [
+        "post_id",
+        "user_id"
+    ],
+    "permission": {
+        "read": true,
+        "create": "auth.uid != null",
+        "update": false,
+        "delete": "doc.user_id == auth.uid"
+    },
+    "properties": {
+        "_id": {
+            "description": "ID"
+        },
+        "post_id": {
+            "bsonType": "string",
+            "description": "作品ID"
+        },
+        "user_id": {
+            "bsonType": "string",
+            "description": "用户ID",
+            "forceDefaultValue": {
+                "$env": "uid"
+            }
+        },
+        "created_at": {
+            "bsonType": "timestamp",
+            "description": "创建时间",
+            "forceDefaultValue": {
+                "$env": "now"
+            }
+        }
+    }
+}

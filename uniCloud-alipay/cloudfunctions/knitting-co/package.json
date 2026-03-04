@@ -1,0 +1,7 @@
+{
+    "name": "knitting-co",
+    "version": "1.0.0",
+    "description": "织嘛业务逻辑云对象",
+    "main": "index.obj.js",
+    "dependencies": {}
+}

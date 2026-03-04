@@ -1,0 +1,152 @@
+{
+    "bsonType": "object",
+    "required": [
+        "name",
+        "created_at",
+        "user_id"
+    ],
+    "permission": {
+        "read": "doc.user_id == auth.uid",
+        "create": "auth.uid != null",
+        "update": "auth.uid != null && doc.user_id == auth.uid",
+        "delete": "auth.uid != null && doc.user_id == auth.uid"
+    },
+    "properties": {
+        "_id": {
+            "description": "ID，系统自动生成"
+        },
+        "user_id": {
+            "bsonType": "string",
+            "description": "创建者ID",
+            "forceDefaultValue": {
+                "$env": "uid"
+            }
+        },
+        "name": {
+            "bsonType": "string",
+            "description": "项目名称",
+            "title": "项目名称"
+        },
+        "description": {
+            "bsonType": "string",
+            "description": "项目简介",
+            "title": "简介"
+        },
+        "cover": {
+            "bsonType": "string",
+            "description": "封面图URL或FileID",
+            "title": "封面图"
+        },
+        "total_rows": {
+            "bsonType": "int",
+            "description": "项目总行数",
+            "title": "总行数",
+            "defaultValue": 0
+        },
+        "current_row": {
+            "bsonType": "int",
+            "description": "当前完成行数",
+            "title": "当前行数",
+            "defaultValue": 0
+        },
+        "status": {
+            "bsonType": "string",
+            "description": "项目状态: planning/in_progress/completed",
+            "title": "状态",
+            "enum": [
+                {
+                    "value": "planning",
+                    "text": "计划中"
+                },
+                {
+                    "value": "in_progress",
+                    "text": "进行中"
+                },
+                {
+                    "value": "completed",
+                    "text": "已完成"
+                }
+            ],
+            "defaultValue": "in_progress"
+        },
+        "created_at": {
+            "bsonType": "timestamp",
+            "description": "创建时间",
+            "forceDefaultValue": {
+                "$env": "now"
+            }
+        },
+        "updated_at": {
+            "bsonType": "timestamp",
+            "description": "最后更新时间",
+            "forceDefaultValue": {
+                "$env": "now"
+            }
+        },
+        "yarns": {
+            "bsonType": "array",
+            "description": "关联的毛线列表",
+            "items": {
+                "bsonType": "object",
+                "properties": {
+                    "id": {
+                        "bsonType": "string"
+                    },
+                    "name": {
+                        "bsonType": "string"
+                    },
+                    "color": {
+                        "bsonType": "string"
+                    }
+                }
+            }
+        },
+        "notes": {
+            "bsonType": "array",
+            "description": "项目笔记",
+            "items": {
+                "bsonType": "object",
+                "properties": {
+                    "id": {
+                        "bsonType": "string"
+                    },
+                    "content": {
+                        "bsonType": "string"
+                    },
+                    "created_at": {
+                        "bsonType": "string"
+                    }
+                }
+            }
+        },
+        "timer_seconds": {
+            "bsonType": "int",
+            "description": "计时器秒数",
+            "defaultValue": 0
+        },
+        "stitch_count": {
+            "bsonType": "int",
+            "description": "针数计数",
+            "defaultValue": 0
+        },
+        "pattern_images": {
+            "bsonType": "array",
+            "description": "图解图片列表",
+            "items": {
+                "bsonType": "string"
+            }
+        },
+        "ai_sections": {
+            "bsonType": "array",
+            "description": "AI图解解析结果"
+        },
+        "ai_checked_rows": {
+            "bsonType": "object",
+            "description": "AI图解已勾选的行"
+        },
+        "ai_pattern_image": {
+            "bsonType": "string",
+            "description": "AI图解上传的图片fileID"
+        }
+    }
+}

@@ -1,0 +1,1 @@
+<view class="bottom-nav-bar data-v-744d182b"><view wx:for="{{a}}" wx:for-item="item" wx:key="e" class="nav-item data-v-744d182b" bindtap="{{item.f}}"><uni-icons wx:if="{{item.b}}" class="data-v-744d182b" u-i="{{item.a}}" bind:__l="__l" u-p="{{item.b}}"></uni-icons><text class="{{['label', 'data-v-744d182b', item.d && 'active']}}">{{item.c}}</text></view></view>

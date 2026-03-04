@@ -1,0 +1,7 @@
+{
+    "name": "ai-pattern-analyze",
+    "version": "1.0.0",
+    "description": "AI图解分析云函数 - 调用腾讯混元大模型",
+    "main": "index.js",
+    "dependencies": {}
+}

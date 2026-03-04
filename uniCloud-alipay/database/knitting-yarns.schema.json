@@ -1,0 +1,76 @@
+{
+    "bsonType": "object",
+    "required": [
+        "name",
+        "created_at",
+        "user_id"
+    ],
+    "permission": {
+        "read": "doc.user_id == auth.uid",
+        "create": "auth.uid != null",
+        "update": "auth.uid != null && doc.user_id == auth.uid",
+        "delete": "auth.uid != null && doc.user_id == auth.uid"
+    },
+    "properties": {
+        "_id": {
+            "description": "ID，系统自动生成"
+        },
+        "user_id": {
+            "bsonType": "string",
+            "description": "创建者ID",
+            "forceDefaultValue": {
+                "$env": "uid"
+            }
+        },
+        "name": {
+            "bsonType": "string",
+            "description": "毛线名称/标题",
+            "title": "名称"
+        },
+        "description": {
+            "bsonType": "string",
+            "description": "描述",
+            "title": "描述"
+        },
+        "color": {
+            "bsonType": "string",
+            "description": "颜色值或名称",
+            "title": "颜色"
+        },
+        "weight": {
+            "bsonType": "string",
+            "description": "重量/规格 (如 50g)",
+            "title": "重量"
+        },
+        "quantity": {
+            "bsonType": "int",
+            "description": "数量",
+            "title": "数量",
+            "defaultValue": 1
+        },
+        "image": {
+            "bsonType": "string",
+            "description": "展示图片URL或FileID",
+            "title": "图片"
+        },
+        "project_id": {
+            "bsonType": "string",
+            "description": "关联的项目ID",
+            "title": "关联项目"
+        },
+        "created_at": {
+            "bsonType": "timestamp",
+            "description": "创建时间",
+            "forceDefaultValue": {
+                "$env": "now"
+            }
+        },
+        "updated_at": {
+            "bsonType": "timestamp",
+            "description": "最后更新时间",
+            "forceDefaultValue": {
+                "$env": "now"
+            }
+        }
+    }
+}
